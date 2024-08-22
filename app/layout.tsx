@@ -4,9 +4,9 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-// export const dynamicParams = false;
+export const dynamicParams = false;
 
-export const runtime = "edge";
+// export const runtime = "edge";
 
 export const metadata: Metadata = {
   title: "Create Next App",
