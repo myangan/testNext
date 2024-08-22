@@ -4,8 +4,11 @@ export const dynamicParams = false;
 
 export async function generateStaticParams() {
   const arr = [];
+  const locale = ["en", "ca", "ie"];
   for (let i = 0; i < 10; i += 1) {
-    arr.push(`page-${i}`);
+    for (let j = 0; j < locale.length; j += 1) {
+      arr.push({ locale: locale[j], category: `page-${i}` });
+    }
   }
   console.log(arr);
   return arr;
