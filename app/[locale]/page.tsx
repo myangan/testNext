@@ -3,11 +3,8 @@ import { ReactElement } from "react";
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const arr = [];
-  for (let i = 0; i < 10000; i += 1) {
-    arr.push(`page-${i}`);
-  }
-  return arr;
+  const locale = ["en", "ca", "ie"];
+  return locale;
 }
 
 export default function BlogPostPage(props: any) {
