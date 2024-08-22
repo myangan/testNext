@@ -8,7 +8,5 @@ export async function generateStaticParams() {
 }
 
 export default function BlogPostPage(props: any) {
-  console.log(props);
-
   return <p>test</p>;
 }

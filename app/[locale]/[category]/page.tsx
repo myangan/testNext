@@ -4,7 +4,7 @@ export const dynamicParams = false;
 
 export async function generateStaticParams() {
   const arr = [];
-  for (let i = 0; i < 10000; i += 1) {
+  for (let i = 0; i < 10; i += 1) {
     arr.push(`page-${i}`);
   }
   console.log(arr);
