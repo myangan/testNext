@@ -4,9 +4,13 @@ export const dynamicParams = false;
 // export const dynamic = "force-static";
 // export const runtime = "edge";
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   const locale = ["en", "ca", "ie"];
-  return locale;
+  return locale.map((item) => {
+    return {
+      locale: item,
+    };
+  });
 }
 
 export default function BlogPostPage({ params }: { params: any }) {

@@ -1,12 +1,5 @@
 import Image from "next/image";
 
-export const dynamicParams = false;
-
-export async function generateStaticParams() {
-  const locale = ["en", "ca", "ie"];
-  return locale;
-}
-
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
