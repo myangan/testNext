@@ -1,4 +1,6 @@
 import { ReactElement } from "react";
+import testImage from "@/image.png";
+import Image from "next/image";
 
 export const dynamicParams = false;
 // export const dynamic = "force-static";
@@ -8,7 +10,7 @@ export const dynamicParams = false;
 export function generateStaticParams() {
   const arr = [];
   const locale = ["en", "ca", "ie"];
-  for (let i = 0; i < 2000; i += 1) {
+  for (let i = 0; i < 1200; i += 1) {
     for (let j = 0; j < locale.length; j += 1) {
       arr.push({ locale: locale[j], category: `page-${i}` });
     }
@@ -26,8 +28,11 @@ export default function BlogPostPage({
   };
 }) {
   return (
-    <p>
-      test in test-{params.locale}-{params.category}
-    </p>
+    <>
+      <Image src={testImage} alt="test" />
+      <p>
+        test in test-{params.locale}-{params.category}
+      </p>
+    </>
   );
 }
