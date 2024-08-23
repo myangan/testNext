@@ -10,7 +10,7 @@ export const dynamicParams = false;
 export function generateStaticParams() {
   const arr = [];
   const locale = ["en", "ca", "ie"];
-  for (let i = 0; i < 1700; i += 1) {
+  for (let i = 0; i < 1300; i += 1) {
     for (let j = 0; j < locale.length; j += 1) {
       arr.push({ locale: locale[j], category: `page-${i}` });
     }
@@ -29,7 +29,8 @@ export default function BlogPostPage({
 }) {
   return (
     <>
-      <img alt="test" height={300} src={testImage.src} width={300} />
+      <Image src={testImage} alt={"test"} />
+      {/* <img alt="test" height={300} src={testImage.src} width={300} /> */}
       <p>
         test in test-{params.locale}-{params.category}
       </p>
