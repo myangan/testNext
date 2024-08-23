@@ -1,7 +1,8 @@
 import { ReactElement } from "react";
 
-export const dynamicParams = false;
-export const dynamic = "force-static";
+// export const dynamicParams = false;
+// export const dynamic = "force-static";
+export const runtime = "edge";
 
 export async function generateStaticParams() {
   const locale = ["en", "ca", "ie"];
