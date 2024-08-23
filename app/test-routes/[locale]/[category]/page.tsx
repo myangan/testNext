@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import testImage from "@/image.png";
+import testImage from "@/public/image.png";
 import Image from "next/image";
 
 export const dynamicParams = false;
