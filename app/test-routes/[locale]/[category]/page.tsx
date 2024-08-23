@@ -12,12 +12,21 @@ export async function generateStaticParams() {
       arr.push({ locale: locale[j], category: `page-${i}` });
     }
   }
-  console.log(arr);
+
   return arr;
 }
 
-export default function BlogPostPage(props: any) {
-  console.log(props);
-
-  return <p>test in test</p>;
+export default function BlogPostPage({
+  params,
+}: {
+  params: {
+    locale: string;
+    category: string;
+  };
+}) {
+  return (
+    <p>
+      test in test-{params.locale}-{params.category}
+    </p>
+  );
 }
